@@ -4,6 +4,37 @@
 body{
     background-color: rgb(18, 18, 18);
 }
-#botoncito{
-    background-color: aquamarine;
+nav .row  .col-1{
+    text-align: end;
+}
+#logo{
+    width: 80px;
+    height: 80px;
+}
+nav .row  .col-2{
+    margin-top: 2rem;
+    color: aliceblue;
+}
+nav .form-control{
+    background-color: rgb(18, 18, 18);
+    height: 6vh;
+    width: 50rem;
+    align-self: center;
+}
+nav .form-control::placeholder{
+    color: rgb(186, 187, 187);
+}
+nav .form-control:enabled{
+    background-color: transparent;
+    color: aliceblue;
+}
+.nombre{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+.btn-outline-light{
+    height: 6vh;
+    align-self: center;
 }
