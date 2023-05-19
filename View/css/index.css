@@ -6,14 +6,16 @@ body{
 }
 nav .row  .col-1{
     text-align: end;
+    align-self: center;
 }
 #logo{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 }
 nav .row  .col-2{
     margin-top: 2rem;
     color: aliceblue;
+    align-self: center;
 }
 nav .form-control{
     background-color: rgb(18, 18, 18);
