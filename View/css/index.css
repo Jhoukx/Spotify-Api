@@ -1,0 +1,9 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: rgb(18, 18, 18);
+}
+#botoncito{
+    background-color: aquamarine;
+}
