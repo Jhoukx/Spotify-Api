@@ -40,3 +40,7 @@ nav .form-control:enabled{
     height: 6vh;
     align-self: center;
 }
+#artist-image{
+    width: 8svh;
+    height: 8svh;
+}
