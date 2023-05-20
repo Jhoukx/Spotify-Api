@@ -44,3 +44,6 @@ nav .form-control:enabled{
     width: 8svh;
     height: 8svh;
 }
+article{
+    border: 1px solid white;
+}
