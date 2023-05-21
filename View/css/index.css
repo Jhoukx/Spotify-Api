@@ -22,6 +22,7 @@ nav .form-control{
     height: 6vh;
     width: 50rem;
     align-self: center;
+    border-radius: 20px;
 }
 nav .form-control::placeholder{
     color: rgb(186, 187, 187);
@@ -30,7 +31,13 @@ nav .form-control:enabled{
     background-color: transparent;
     color: aliceblue;
 }
-.nombre{
+main{
+    color: white;
+}
+#topResult{
+    margin-left: 10%;
+}
+.buscador{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -43,7 +50,13 @@ nav .form-control:enabled{
 #artist-image{
     width: 8svh;
     height: 8svh;
+    margin: 5%;
+}
+article span{
+    margin-left: 4vh;
+    margin-bottom: 4vh;
 }
 article{
     border: 1px solid white;
+    display:flex;
 }
