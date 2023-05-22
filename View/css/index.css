@@ -9,13 +9,14 @@ nav .row  .col-1{
     align-self: center;
 }
 #logo{
-    width: 70px;
-    height: 70px;
+    width:  65%;
+    height: 65%;
+    margin: 2rem;
+    background-color: black;
 }
 nav .row  .col-2{
-    margin-top: 2rem;
-    color: aliceblue;
     align-self: center;
+    background-color: black;
 }
 nav .form-control{
     background-color: rgb(18, 18, 18);
@@ -30,11 +31,15 @@ nav .form-control::placeholder{
 nav .form-control:enabled{
     background-color: rgb(255, 255, 255);
     color: black;
+    margin-left: 3rem;
     border-radius: 40px;
 }
 
 main{
     color: white;
+}
+main .row .col-2{
+    background-color: black;
 }
 #topResult{
     margin-left: 4%;
@@ -43,6 +48,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    background-color: #0e0d0d;
     gap: 1rem;
 }
 .btn-outline-light{
