@@ -4,10 +4,6 @@
 body{
     background-color: rgb(24, 23, 23);
 }
-nav .row  .col-1{
-    text-align: end;
-    align-self: center;
-}
 #logo{
     width:  65%;
     height: 65%;
@@ -38,12 +34,20 @@ nav .form-control:enabled{
 main{
     color: white;
 }
+main .row .col-10 .row{
+    margin-left: 2rem;
+}
+.firts-result{
+    margin-bottom: 4rem;
+}
 main .row .col-2{
     background-color: black;
 }
-main .row .col-10 input{
-    background-color:rgb(36, 35, 35) ;
+#botones input{
+    background-color:rgb(36, 35, 35);
     color: white;
+    display: flex;
+    width: fit-content;
     margin: 0.5%;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -53,12 +57,11 @@ main .row .col-10 input{
     padding: 0.5rem;
     transition: 0.5s;
 }
-main .row .col-10 input:hover{
+#botones input:hover{
     background-color: rgb(59, 58, 58) ;
     transition: 0.5s;
 }
 #topResult{
-    margin-left: 4%;
     margin-right: 4%;
 }
 .buscador{
@@ -75,14 +78,10 @@ main .row .col-10 input:hover{
     height: 13svh;
     margin: 5%;
 }
-article span{
-    margin-left: 4vh;
-    margin-bottom: 4vh;
-}
 article{
     margin-top: 7%;
     border-radius: 10px;
-    background-color: rgb(36, 35, 35);
+    background-color: rgb(34, 33, 33);
     padding: 1rem;
     transition: 0.5s;
 }
@@ -105,7 +104,7 @@ article h4{
     
 }
 #tracks{
-    margin-top: 5%;
+    margin-top: 2%;
     border-radius: 10px;
     width: 100%;
     height: 33.8vh;
@@ -118,4 +117,35 @@ article h4{
 #tracks iframe:hover{
     margin-left: 2rem;
     transition: 0.5s ease;
+}
+#artists{
+    display: flex;
+}
+#artists .col-2 img{
+    width: 25svh;
+    height: 25svh;
+    margin: 0.5rem;
+    border-radius: 7rem;
+}
+#artists div{
+    width: fit-content;
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    background-color: rgb(34, 33, 33);
+    padding: 1rem;
+    transition: 0.5s;
+}
+#artists div:hover{
+    background-color: rgb(43, 42, 42);
+    transition: 0.5s;
+}
+#artists h4{
+    margin-left: 1rem;
+    color: white;
+}
+#artists span{
+    font-size: x-large;
+    margin-left: 1rem;
+    color: rgb(196, 196, 196);
 }
