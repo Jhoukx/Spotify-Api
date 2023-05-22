@@ -41,13 +41,28 @@ main{
 main .row .col-2{
     background-color: black;
 }
+main .row .col-10 input{
+    background-color:rgb(36, 35, 35) ;
+    color: white;
+    margin: 0.5%;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: revert;
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem;
+    transition: 0.5s;
+}
+main .row .col-10 input:hover{
+    background-color: rgb(59, 58, 58) ;
+    transition: 0.5s;
+}
 #topResult{
     margin-left: 4%;
+    margin-right: 4%;
 }
 .buscador{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     background-color: #0e0d0d;
     gap: 1rem;
 }
@@ -77,6 +92,9 @@ article:hover{
 }
 article h1{
     margin-left: 2rem;
+}
+h2{
+    font-weight: revert ;
 }
 article h4{
     margin-left: 2rem;
