@@ -2,7 +2,7 @@
     margin: 0px;
 }
 body{
-    background-color: rgb(18, 18, 18);
+    background-color: rgb(24, 23, 23);
 }
 nav .row  .col-1{
     text-align: end;
@@ -25,17 +25,17 @@ nav .form-control{
     border-radius: 20px;
 }
 nav .form-control::placeholder{
-    color: rgb(186, 187, 187);
+    color: rgb(18, 18, 18);
 }
 nav .form-control:enabled{
-    background-color: transparent;
+    background-color: aliceblue;
     color: aliceblue;
 }
 main{
     color: white;
 }
 #topResult{
-    margin-left: 10%;
+    margin-left: 4%;
 }
 .buscador{
     display: flex;
@@ -48,8 +48,8 @@ main{
     align-self: center;
 }
 #artist-image{
-    width: 8svh;
-    height: 8svh;
+    width: 13svh;
+    height: 13svh;
     margin: 5%;
 }
 article span{
@@ -57,6 +57,22 @@ article span{
     margin-bottom: 4vh;
 }
 article{
-    border: 1px solid white;
-    display:flex;
+    margin-top: 10%;
+    border-radius: 10px;
+    background-color: rgb(36, 35, 35);
+    padding: 1rem;
+}
+article:hover{
+    background-color: rgb(43, 42, 42);
+}
+article h1{
+    margin-left: 2rem;
+}
+article h4{
+    margin-left: 2rem;
+    padding: 2%;
+    background-color:  rgb(24, 23, 23);
+    width: fit-content;
+    border-radius: 20px
+    
 }
