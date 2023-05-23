@@ -12,7 +12,7 @@ export async function showFirtsApi (data){
         sectionArtists.innerHTML += `
         <div class="col-2">
             <img src="${imgArtist}" alt="" srcset="">
-            <h4>${nameArtist}</h4>
+            <h5>${nameArtist}</h5>
             <span>Artist</span>
         </div>
         `
@@ -40,7 +40,7 @@ export async function showFirtsApi (data){
         sectionAlbums.innerHTML +=  /*html */ `
         <div class="col-2">
             <img src="${imgAlbum}" alt="" srcset="">
-            <h4>${nameAlbum}</h4>
+            <h5>${nameAlbum}</h5>
             <span>${yearAlbum} • ${artistAlbum}</span>
         </div>
         `
@@ -54,7 +54,7 @@ export async function showFirtsApi (data){
         sectionPlaylist.innerHTML += /*html */ `
         <div class="col-2">
             <img src="${imgPlaylist}" alt="" srcset="">
-            <h4>${namePlaylist}</h4>
+            <h5>${namePlaylist}</h5>
             <span>By ${ownerPlaylist}</span>
         </div>
         `
@@ -69,7 +69,7 @@ export async function showFirtsApi (data){
         sectionPodcasts.innerHTML += /*html */ `
         <div class="col-2">
             <img src="${imgPodcast}" alt="" srcset="">
-            <h4>${namePodcast}</h4>
+            <h5>${namePodcast}</h5>
             <span>${ownerPodcast}</span>
         </div>
         `
