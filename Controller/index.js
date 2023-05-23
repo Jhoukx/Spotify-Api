@@ -16,11 +16,14 @@ document.querySelector("#buscador").addEventListener("search",runApis)
 
 document.querySelector("#botones").addEventListener("click",(b)=>{
     let mainArea = document.querySelector("#mainArea");
+    let albumsArea = document.querySelector("#albumsArea");
     console.log(b.target.value);
     switch (b.target.value){
         case "Albums":
             mainArea.classList.remove("block-element");
-            mainArea.classList.add("hidden-element");              
+            mainArea.classList.add("hidden-element"); 
+            albumsArea.classList.remove("hidden-element");
+            albumsArea.classList.add("block-element")
             break
         case "Artists":
             console.log("Boton Artists");
@@ -35,6 +38,7 @@ document.querySelector("#botones").addEventListener("click",(b)=>{
             console.log("Boton All");
             mainArea.classList.remove("hidden-element");
             mainArea.classList.add("block-element");   
+            albumsArea.classList.remove("block-element")
     }
 })
 
