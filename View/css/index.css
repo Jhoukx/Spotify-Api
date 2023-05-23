@@ -161,3 +161,10 @@ section span{
     font-size: x-large;
     color: rgb(196, 196, 196);
 }
+/* Switch Areas*/
+.hidden-element{
+    display: none;
+}
+.block-element{
+    display: block;
+}

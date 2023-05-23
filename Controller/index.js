@@ -15,9 +15,12 @@ async function runApis(){
 document.querySelector("#buscador").addEventListener("search",runApis)
 
 document.querySelector("#botones").addEventListener("click",(b)=>{
+    let mainArea = document.querySelector("#mainArea");
+    console.log(b.target.value);
     switch (b.target.value){
         case "Albums":
-            console.log("Boton Albums");
+            mainArea.classList.remove("block-element");
+            mainArea.classList.add("hidden-element");              
             break
         case "Artists":
             console.log("Boton Artists");
@@ -30,6 +33,8 @@ document.querySelector("#botones").addEventListener("click",(b)=>{
             break
         default:
             console.log("Boton All");
+            mainArea.classList.remove("hidden-element");
+            mainArea.classList.add("block-element");   
     }
 })
 
