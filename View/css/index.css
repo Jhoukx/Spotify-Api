@@ -40,7 +40,7 @@ main .row .col-10 .row{
 .firts-result{
     margin-bottom: 4rem;
 }
-main .row .col-2{
+main .espacio{
     background-color: black;
 }
 #botones input{
@@ -118,16 +118,17 @@ article h4{
     margin-left: 2rem;
     transition: 0.5s ease;
 }
-#artists{
+section{
     display: flex;
+    margin-bottom: 2rem;
 }
-#artists .col-2 img{
-    width: 25svh;
-    height: 25svh;
+section .col-2 img{
+    width: 25vh;
+    height: 25vh;
     margin: 0.5rem;
     border-radius: 7rem;
 }
-#artists div{
+section div{
     width: fit-content;
     border-radius: 12px;
     margin-top: 2rem;
@@ -136,15 +137,15 @@ article h4{
     padding: 1rem;
     transition: 0.5s;
 }
-#artists div:hover{
-    background-color: rgb(43, 42, 42);
+section div:hover{
+    background-color: rgb(59, 58, 58);
     transition: 0.5s;
 }
-#artists h4{
+section h4{
     margin-left: 1rem;
     color: white;
 }
-#artists span{
+section span{
     font-size: x-large;
     margin-left: 1rem;
     color: rgb(196, 196, 196);
