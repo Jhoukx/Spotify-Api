@@ -1,5 +1,5 @@
 export async function showFirtsApi (data){
-    //Photo y Top Result´s name
+    //Top Results
     const topImageApi = data.topResults.items[0].data.visuals.avatarImage.sources[0].url
     const topNameApi = data.topResults.items[0].data.profile.name
     document.querySelector("#artist-image").src = `${topImageApi}`
@@ -44,5 +44,20 @@ export async function showFirtsApi (data){
             <span>${yearAlbum} • ${artistAlbum}</span>
         </div>
         `
+    }
+    // Playlists
+    const sectionPlaylist = document.getElementById("playlists");
+    for (let p = 0; p < 4; p++) {
+        const imgPlaylist = data.playlists.items[p].data.images.items[0].sources[0].url;
+        const namePlaylist = data.playlists.items[p].data.name;
+        const ownerPlaylist = data.playlists.items[p].data.owner.name;
+        sectionPlaylist.innerHTML = /*html */ `
+        <div class="col-2">
+            <img src="${imgPlaylist}" alt="" srcset="">
+            <h4>${namePlaylist}</h4>
+            <span>By ${ownerPlaylist}</span>
+        </div>
+        `
+        
     }
 }
