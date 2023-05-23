@@ -40,8 +40,10 @@ main .row .col-10 .row{
 .firts-result{
     margin-bottom: 4rem;
 }
-main .espacio{
+#espacio{
     background-color: black;
+    height: 100vh;
+    color: black;
 }
 #botones input{
     background-color:rgb(36, 35, 35);

@@ -15,7 +15,6 @@ async function runApis(){
 document.querySelector("#buscador").addEventListener("search",runApis)
 
 document.querySelector("#botones").addEventListener("click",(b)=>{
-    console.log(b.target.value);
     switch (b.target.value){
         case "Albums":
             console.log("Boton Albums");
