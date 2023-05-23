@@ -16,6 +16,20 @@ export async function showFirtsApi (data){
         loading="lazy"></iframe>
         `
     }
+    // Artists
+    const sectionArtists = document.getElementById("artists");
+    for (let ar = 0; ar < 4; ar++) {
+        const imgArtist = data.artists.items[ar].data.visuals.avatarImage.sources[0].url;
+        const nameArtist = data.artists.items[ar].data.profile.name;
+        sectionArtists.innerHTML = /*html */ `
+        <div class="col-2">
+            <img src="${imgArtist}" alt="" srcset="">
+            <h4>${nameArtist}</h4>
+            <span>Artist</span>
+        </div>
+        `
+        
+    }
     //Albums
     const sectionAlbums = document.getElementById("albums");
     for (let a = 0; a < 4; a++) {
