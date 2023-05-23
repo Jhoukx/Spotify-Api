@@ -125,7 +125,6 @@ section{
 section .col-2 img{
     width: 25vh;
     height: 25vh;
-    margin: 0.5rem;
     border-radius: 7rem;
 }
 section div{
