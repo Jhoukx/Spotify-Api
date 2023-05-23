@@ -4,24 +4,12 @@ export async function showFirtsApi (data){
     const topNameApi = data.topResults.items[0].data.profile.name
     document.querySelector("#artist-image").src = `${topImageApi}`
     document.querySelector("#artist-name").textContent = `${topNameApi}`
-    //Songs
-    const sectionTracks = document.getElementById("tracks");
-    for (let s = 0; s < 3; s++) {
-        const idTrack = data.tracks.items[s].data.id
-        sectionTracks.innerHTML = /*html */ `
-        <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/track/${idTrack}?utm_source=generator&theme=0"
-        width="100%" height="90" frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"></iframe>
-        `
-    }
     // Artists
     const sectionArtists = document.getElementById("artists");
-    for (let ar = 0; ar < 4; ar++) {
+    for (let ar = 0; ar < 5; ar++) {
         const imgArtist = data.artists.items[ar].data.visuals.avatarImage.sources[0].url;
         const nameArtist = data.artists.items[ar].data.profile.name;
-        sectionArtists.innerHTML = /*html */ `
+        sectionArtists.innerHTML += `
         <div class="col-2">
             <img src="${imgArtist}" alt="" srcset="">
             <h4>${nameArtist}</h4>
@@ -30,14 +18,26 @@ export async function showFirtsApi (data){
         `
         
     }
+    //Songs
+    const sectionTracks = document.getElementById("tracks");
+    for (let s = 0; s < 4; s++) {
+        const idTrack = data.tracks.items[s].data.id
+        sectionTracks.innerHTML += /*html */ `
+        <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/${idTrack}?utm_source=generator&theme=0"
+        width="100%" height="90" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+        `
+    }
     //Albums
     const sectionAlbums = document.getElementById("albums");
-    for (let a = 0; a < 4; a++) {
+    for (let a = 0; a < 5; a++) {
         const imgAlbum = data.albums.items[a].data.coverArt.sources[2].url;
         const nameAlbum = data.albums.items[a].data.name;
         const yearAlbum = data.albums.items[a].data.date.year;
         const artistAlbum = data.albums.items[a].data.artists.items[0].profile.name;
-        sectionAlbums.innerHTML =  /*html */ `
+        sectionAlbums.innerHTML +=  /*html */ `
         <div class="col-2">
             <img src="${imgAlbum}" alt="" srcset="">
             <h4>${nameAlbum}</h4>
@@ -47,11 +47,11 @@ export async function showFirtsApi (data){
     }
     // Playlists
     const sectionPlaylist = document.getElementById("playlists");
-    for (let p = 0; p < 4; p++) {
+    for (let p = 0; p < 5; p++) {
         const imgPlaylist = data.playlists.items[p].data.images.items[0].sources[0].url;
         const namePlaylist = data.playlists.items[p].data.name;
         const ownerPlaylist = data.playlists.items[p].data.owner.name;
-        sectionPlaylist.innerHTML = /*html */ `
+        sectionPlaylist.innerHTML += /*html */ `
         <div class="col-2">
             <img src="${imgPlaylist}" alt="" srcset="">
             <h4>${namePlaylist}</h4>

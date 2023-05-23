@@ -51,7 +51,7 @@ main .espacio{
     margin: 0.5%;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    font-weight: revert;
+    font-weight: 500;
     border: none;
     border-radius: 30px;
     padding: 0.5rem;
@@ -59,6 +59,11 @@ main .espacio{
 }
 #botones input:hover{
     background-color: rgb(59, 58, 58) ;
+    transition: 0.5s;
+}
+#botones input:focus{
+    background-color: whitesmoke;
+    color: black;
     transition: 0.5s;
 }
 #topResult{
