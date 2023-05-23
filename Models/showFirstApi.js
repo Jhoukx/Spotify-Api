@@ -60,4 +60,19 @@ export async function showFirtsApi (data){
         `
         
     }
+    //Podcasts
+    const sectionPodcasts = document.getElementById("podcasts");
+    for (let p = 0; p < 5; p++) {
+        const imgPodcast = data.podcasts.items[p].data.coverArt.sources[2].url;
+        const namePodcast = data.podcasts.items[p].data.name;
+        const ownerPodcast = data.podcasts.items[p].data.publisher.name;
+        sectionPodcasts.innerHTML += /*html */ `
+        <div class="col-2">
+            <img src="${imgPodcast}" alt="" srcset="">
+            <h4>${namePodcast}</h4>
+            <span>${ownerPodcast}</span>
+        </div>
+        `
+        
+    }
 }

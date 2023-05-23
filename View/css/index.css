@@ -131,6 +131,11 @@ section{
 section .col-2 img{
     width: 25vh;
     height: 25vh;
+    border-radius: 1rem;
+}
+#artists .col-2 img{
+    width: 25vh;
+    height: 25vh;
     border-radius: 7rem;
 }
 section div{
