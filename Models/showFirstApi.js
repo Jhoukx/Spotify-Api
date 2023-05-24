@@ -132,3 +132,11 @@ export function albumArea(data) {
   }
   
 }
+
+export function artistsArea (data){
+  // Artists Area
+  document.getElementById("artistsArea").innerHTML = "";
+  let artistsArea = document.getElementById("artistsArea");
+  
+  // Artists row
+}
