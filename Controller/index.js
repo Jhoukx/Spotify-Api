@@ -19,16 +19,31 @@ document.querySelector("#buscador").addEventListener("search",runApis)
 document.querySelector("#botones").addEventListener("click",(b)=>{
     let mainArea = document.querySelector("#mainArea");
     let albumsArea = document.querySelector("#albumsArea");
+    let artistsArea = document.querySelector("#artistsArea");
     console.log(b.target.value);
     switch (b.target.value){
         case "Albums":
-            mainArea.classList.remove("block-element");
+            //show albums area
+            albumsArea.className = "";
+            albumsArea.classList.add("block-element");
+            // Hide main Area
+            mainArea.className = "";;
             mainArea.classList.add("hidden-element"); 
-            albumsArea.classList.remove("hidden-element");
-            albumsArea.classList.add("block-element")
+            //Hide artists Area
+            artistsArea.className ="";
+            artistsArea.classList.add("hidden-element");
             break
         case "Artists":
-            console.log("Boton Artists");
+            console.log("Button Artists");
+            //Show Artist Area
+            artistsArea.className ="";
+            artistsArea.classList.add("block-element");
+            // Hide main Area
+            mainArea.className ="";
+            mainArea.classList.add("hidden-element");
+            //Hide albums area
+            albumsArea.className = "";
+            albumsArea.classList.add("hidden-element");
             break
         case "Songs":
             console.log("Boton Song");
@@ -38,11 +53,15 @@ document.querySelector("#botones").addEventListener("click",(b)=>{
             break
         default:
             console.log("Boton All");
-            mainArea.classList.remove("hidden-element");
-            mainArea.classList.add("block-element");   
-            albumsArea.classList.remove("block-element");
+            // show main Area
+            mainArea.className ="";
+            mainArea.classList.add("block-element");
+            // Hide albums Area   
+            albumsArea.className ="";
             albumsArea.classList.add("hidden-element"); 
-
+            // Hide artists Area
+            artistsArea.className ="";
+            artistsArea.classList.add("hidden-element");
     }
 })
 
