@@ -42,7 +42,7 @@ main .row .col-10 .row{
 }
 #espacio{
     background-color: black;
-    height: 100vh;
+    height: auto;
     color: black;
 }
 #botones input{
