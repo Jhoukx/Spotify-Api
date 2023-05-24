@@ -38,7 +38,9 @@ document.querySelector("#botones").addEventListener("click",(b)=>{
             console.log("Boton All");
             mainArea.classList.remove("hidden-element");
             mainArea.classList.add("block-element");   
-            albumsArea.classList.remove("block-element")
+            albumsArea.classList.remove("block-element");
+            albumsArea.classList.add("hidden-element"); 
+
     }
 })
 
