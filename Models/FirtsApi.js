@@ -1,5 +1,5 @@
 export async function doSearch(word) {
-    const url = `https://spotify23.p.rapidapi.com/search/?q=${word}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
+    const url = `https://spotify23.p.rapidapi.com/search/?q=${word}&type=multi&offset=0&limit=15&numberOfTopResults=5`;
     const options = {
         method: 'GET',
         headers: {

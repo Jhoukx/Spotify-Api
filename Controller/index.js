@@ -11,6 +11,7 @@ async function runApis(){
     let word =createQueryString(document.querySelector("#buscador").value)
     let firtsInfo = await doSearch(word);
     showFirtsApi(firtsInfo);
+    albumArea(firtsInfo);
 }
 
 document.querySelector("#buscador").addEventListener("search",runApis)
@@ -25,7 +26,6 @@ document.querySelector("#botones").addEventListener("click",(b)=>{
             mainArea.classList.add("hidden-element"); 
             albumsArea.classList.remove("hidden-element");
             albumsArea.classList.add("block-element")
-            albumArea()
             break
         case "Artists":
             console.log("Boton Artists");

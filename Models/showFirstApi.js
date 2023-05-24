@@ -1,4 +1,5 @@
 export function showFirtsApi(data) {
+  console.log(data);
   //Top Results
   const topImageApi =
     data.topResults.items[0].data.visuals.avatarImage.sources[0].url;
@@ -83,24 +84,51 @@ export function showFirtsApi(data) {
   }
 }
 
-export function albumArea() {
+export function albumArea(data) {
   // Albums Area
   document.getElementById("albumsArea").innerHTML = "";
   let albumsArea = document.getElementById("albumsArea");
+  
+  // Albums row
   for (let f = 0; f < 3; f++) {
     const div = document.createElement("div");
     div.classList.add("row");
     const section = document.createElement("section");
-    for (let c = 0; c < 5; c++) {
-      section.innerHTML += `
-                  <div class="col-2">
-                      <img src="https://i.scdn.co/image/ab67616d00001e0237c0b3670236c067c8e8bbcb" alt="" srcset="">
-                      <h5>{nameAlbum}</h5>
-                      <span>{yearAlbum} • {artistAlbum}</span>
-                  </div>
-                  `      
+    
+    // Albums Condition
+    let c;
+    switch (f) {
+      case 0:
+        c = 0;
+        break;
+      case 1:
+        c = 5;
+        break;
+      case 2:
+        c = 10;
+        break;
+      default:
+        c = 0;
     }
+    
+    // Albums Colums
+    for (let i = c; i < c + 5; i++) {
+      const imgAlbum = data.albums.items[i].data.coverArt.sources[2].url;
+      const nameAlbum = data.albums.items[i].data.name;
+      const yearAlbum = data.albums.items[i].data.date.year;
+      const artistAlbum = data.albums.items[i].data.artists.items[0].profile.name;
+      
+      section.innerHTML += `
+        <div class="col-2">
+          <img src="${imgAlbum}" alt="" srcset="">
+          <h5>${nameAlbum}</h5>
+          <span>${yearAlbum} • ${artistAlbum}</span>
+        </div>
+      `;
+    }
+    
     div.appendChild(section);
     albumsArea.appendChild(div);
   }
+  
 }
