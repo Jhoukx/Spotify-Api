@@ -1,10 +1,11 @@
-export async function showFirtsApi (data){
+export function showFirtsApi (data){
     //Top Results
     const topImageApi = data.topResults.items[0].data.visuals.avatarImage.sources[0].url
     const topNameApi = data.topResults.items[0].data.profile.name
     document.querySelector("#artist-image").src = `${topImageApi}`
     document.querySelector("#artist-name").textContent = `${topNameApi}`
     // Artists
+    document.getElementById("artists").innerHTML = "";
     const sectionArtists = document.getElementById("artists");
     for (let ar = 0; ar < 5; ar++) {
         const imgArtist = data.artists.items[ar].data.visuals.avatarImage.sources[0].url;
@@ -19,6 +20,7 @@ export async function showFirtsApi (data){
         
     }
     //Songs
+    document.getElementById("tracks").innerHTML="";
     const sectionTracks = document.getElementById("tracks");
     for (let s = 0; s < 4; s++) {
         const idTrack = data.tracks.items[s].data.id
@@ -31,6 +33,7 @@ export async function showFirtsApi (data){
         `
     }
     //Albums
+    document.getElementById("albums").innerHTML = "";
     const sectionAlbums = document.getElementById("albums");
     for (let a = 0; a < 5; a++) {
         const imgAlbum = data.albums.items[a].data.coverArt.sources[2].url;
@@ -46,6 +49,7 @@ export async function showFirtsApi (data){
         `
     }
     // Playlists
+    document.getElementById("playlists").innerHTML ="";
     const sectionPlaylist = document.getElementById("playlists");
     for (let p = 0; p < 5; p++) {
         const imgPlaylist = data.playlists.items[p].data.images.items[0].sources[0].url;
@@ -61,6 +65,7 @@ export async function showFirtsApi (data){
         
     }
     //Podcasts
+    document.getElementById("podcasts").innerHTML = "";
     const sectionPodcasts = document.getElementById("podcasts");
     for (let p = 0; p < 5; p++) {
         const imgPodcast = data.podcasts.items[p].data.coverArt.sources[2].url;
