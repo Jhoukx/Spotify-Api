@@ -84,14 +84,14 @@ export function showFirtsApi(data) {
 }
 
 export function albumArea() {
-    alert("Album Area");
   // Albums Area
   document.getElementById("albumsArea").innerHTML = "";
   let albumsArea = document.getElementById("albumsArea");
   for (let c = 0; c < 3; c++) {
-    albumsArea.innerHTML += `
-        <div class="row">
-            <section>
+    const div = document.createElement("div");
+    div.classList.add("row");
+    const section = document.createElement("section");
+    section.innerHTML += `
                 <div class="col-2">
                     <img src="https://i.scdn.co/image/ab67616d00001e0237c0b3670236c067c8e8bbcb" alt="" srcset="">
                     <h5>{nameAlbum}</h5>
@@ -117,8 +117,8 @@ export function albumArea() {
                     <h5>{nameAlbum}</h5>
                     <span>{yearAlbum} • {artistAlbum}</span>
                 </div>
-            </section>
-        </div>
-`;
+`
+    div.appendChild(section);
+    albumsArea.appendChild(div);
   }
 }
