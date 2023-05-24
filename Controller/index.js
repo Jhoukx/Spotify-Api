@@ -1,5 +1,6 @@
 import {doSearch} from "../Models/FirtsApi.js"
 import {showFirtsApi} from "../Models/showFirstApi.js"
+import {albumArea} from "../Models/showFirstApi.js"
 
 function createQueryString(string){
     let separada =string.split(" ")
@@ -24,6 +25,7 @@ document.querySelector("#botones").addEventListener("click",(b)=>{
             mainArea.classList.add("hidden-element"); 
             albumsArea.classList.remove("hidden-element");
             albumsArea.classList.add("block-element")
+            albumArea()
             break
         case "Artists":
             console.log("Boton Artists");
